@@ -41,6 +41,18 @@ namespace GenericsProject
             return max.ToString();
         }
 
+
+        public T getMax<T>(T a,T b,T c) where T : IComparable<T>
+        {
+            if(a.Equals(b) && b.Equals(c))
+            {
+                throw new Exception("All are same");
+            }
+            T max1 = (a.CompareTo(b) > 0) ? a : b;
+            T max = (c.CompareTo(max1) > 0) ? c : max1;
+            return max;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to generics test case problem...");
