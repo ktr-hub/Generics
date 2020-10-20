@@ -41,7 +41,7 @@ namespace GenericsProject
             return max.ToString();
         }
 
-
+        //Generics Method to get max from int/double/string
         public T getMax<T>(T a,T b,T c) where T : IComparable<T>
         {
             if(a.Equals(b) && b.Equals(c))
